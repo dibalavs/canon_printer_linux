@@ -1,0 +1,2 @@
+KERNEL=="lp*", SUBSYSTEM=="usbmisc", ACTION=="add", SYMLINK+="usb/lp0", RUN+="/bin/systemctl start ccpd1"
+KERNEL=="lp*", SUBSYSTEMS=="usb", ACTION=="remove", RUN+="/bin/systemctl stop ccpd1"
